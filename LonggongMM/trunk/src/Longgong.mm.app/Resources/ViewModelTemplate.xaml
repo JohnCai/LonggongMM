@@ -1,0 +1,102 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Views="clr-namespace:Longgong.mm.app.Views"
+    xmlns:ViewModels="clr-namespace:Longgong.mm.ViewModels;assembly=Longgong.mm.ViewModels">
+    
+    <DataTemplate DataType="{x:Type ViewModels:HomePageViewModel}">
+        <AdornerDecorator>
+            <Views:HomePageView/>
+        </AdornerDecorator>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type ViewModels:LocationViewModel}">
+        <AdornerDecorator>
+            <Views:LocationView/>
+        </AdornerDecorator>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type ViewModels:LocationBrowserViewModel}">
+        <AdornerDecorator>
+            <Views:LocationBrowserView/>
+        </AdornerDecorator>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type ViewModels:LocationDetailViewModel}">
+        <AdornerDecorator>
+            <Views:LocationDetailView/>
+        </AdornerDecorator>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type ViewModels:WorkingProcedureViewModel}">
+        <AdornerDecorator>
+            <Views:WorkingProcedureView />
+        </AdornerDecorator>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type ViewModels:WorkingProcedureBrowserViewModel}">
+        <AdornerDecorator>
+            <Views:WorkingProcedureBrowserView />
+        </AdornerDecorator>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type ViewModels:WorkingProcedureDetailViewModel}">
+        <AdornerDecorator>
+            <Views:WorkingProcedureDetailView />
+        </AdornerDecorator>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ViewModels:ProductViewModel}">
+        <AdornerDecorator>
+            <Views:ProductView/>
+        </AdornerDecorator>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ViewModels:ProductBrowserViewModel}">
+        <AdornerDecorator>
+            <Views:ProductBrowserView/>
+        </AdornerDecorator>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ViewModels:ProductDetailViewModel}">
+        <AdornerDecorator>
+            <Views:ProductDetailView/>
+        </AdornerDecorator>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type ViewModels:RecipeViewModel}">
+        <AdornerDecorator>
+            <Views:RecipeView/>
+        </AdornerDecorator>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ViewModels:RecipeBrowserViewModel}">
+        <AdornerDecorator>
+            <Views:RecipeBrowserView/>
+        </AdornerDecorator>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ViewModels:RecipeDetailViewModel}">
+        <AdornerDecorator>
+            <Views:RecipeDetailView/>
+        </AdornerDecorator>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type ViewModels:MainProductionPlanViewModel}">
+        <AdornerDecorator>
+            <Views:MainProductionPlanView/>
+        </AdornerDecorator>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ViewModels:MainProductionPlanBrowserViewModel}">
+        <AdornerDecorator>
+            <Views:MainProductionPlanBrowserView/>
+        </AdornerDecorator>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ViewModels:MainProductionPlanDetailViewModel}">
+        <AdornerDecorator>
+            <Views:MainProductionPlanDetailView/>
+        </AdornerDecorator>
+    </DataTemplate>
+
+</ResourceDictionary>

@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="Longgong.mm.app.Views.RecipeDetailView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit"
+    xmlns:DPs="clr-namespace:Longgong.mm.app.DPs"
+    Height="Auto" Width="Auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+            <Label Content="序号" Width="60" />
+            <TextBox Width="150" Margin="10,0,90,0" 
+                     Text="{Binding CurrentEntity.ID, ValidatesOnDataErrors=True, ValidatesOnExceptions=True, Mode=OneWay}"
+                     IsEnabled="False"
+                     Style="{StaticResource ValidatingTextBox}"/>
+            <Label Content="工序" Width="60" />
+            <ComboBox Width="150" Margin="10,0,0,0" 
+                     ItemsSource="{Binding AvailableWorkingProcedures}"
+                     SelectedValue="{Binding CurrentEntity.WorkingProcedure,ValidatesOnDataErrors=True, ValidatesOnExceptions=True}"
+                     IsEnabled="{Binding IsWorkingProcedureEditable}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+                     
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">
+            <Label Content="名称" Width="60" />
+            <TextBox Width="150" Margin="10,0,90,0" 
+                     Text="{Binding CurrentEntity.Name, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}"
+                     IsEnabled="{Binding IsNameEditable}"
+                     Style="{StaticResource ValidatingTextBox}"/>
+            <Label Content="描述" Width="60" />
+            <TextBox Width="150" Margin="10,0,0,0" 
+                     Text="{Binding CurrentEntity.Description, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}"
+                     IsEnabled="{Binding IsDescriptionEditable}"
+                     Style="{StaticResource ValidatingTextBox}"/>
+        </StackPanel>
+        
+
+        <GroupBox Header="输入"  Grid.Row="2" Width="540" HorizontalAlignment="Left">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <my:DataGrid AutoGenerateColumns="False" Height="200" Name="dataGrid1" ItemsSource="{Binding RecipeInputs}"
+                             SelectedItem="{Binding SelectedRecipeInput}" CanUserAddRows="False">
+                    <my:DataGrid.Columns>
+                        <my:DataGridTextColumn Header="投入" MinWidth="200" Binding="{Binding InputProduct.Name}">
+                            
+                        </my:DataGridTextColumn>
+                        
+                        <my:DataGridTextColumn Header="数量" MinWidth="60" Binding="{Binding InputQuantity}"/>
+                    </my:DataGrid.Columns>
+                </my:DataGrid>
+                
+                <StackPanel  Grid.Row="1" Orientation="Horizontal" Margin="0, 10, 0, 10">                   
+                    <Button Template="{StaticResource GlassButton}"
+	                    Content="新增" HorizontalAlignment="Center"
+			            VerticalAlignment="Center" Margin="60,0,0,0"
+			            Width="90" Height="30"
+                        Command="{Binding AddInputCommand}"/>
+                    <Button Template="{StaticResource GlassButton}" Grid.Column="1"
+	                    Content="删除" HorizontalAlignment="Center"
+			            VerticalAlignment="Center" Margin="60,0,0,0"
+			            Width="90" Height="30"
+                        Command="{Binding DeleteInputCommand}"/>
+                </StackPanel>
+                
+            </Grid>
+           
+        </GroupBox>
+        
+        <GroupBox Header="输出" Grid.Row="3">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+                <Label Content="产出" Width="60" />
+                <TextBox Width="150" Margin="10,0,0,0" 
+                     Text="{Binding CurrentEntity.OutputProduct.Name, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}"
+                     Style="{StaticResource ValidatingTextBox}"
+                     IsEnabled="{Binding IsOuputProductEditable}" />
+                <Button Margin="0, 0, 60, 0" Width="30" Command="{Binding LookupOutputProductCommand}">...</Button>
+                <Label Content="数量" Width="60" />
+                <TextBox Width="150" Margin="10,0,0,0" 
+                     Text="{Binding CurrentEntity.OutputQuantity, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}"
+                     Style="{StaticResource ValidatingTextBox}"
+                     IsEnabled="{Binding IsOutputQuantityEditable}"
+                     />
+            </StackPanel>
+        </GroupBox>
+        
+    </Grid>
+</UserControl>

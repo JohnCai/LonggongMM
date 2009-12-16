@@ -1,0 +1,7 @@
+﻿<UserControl x:Class="Longgong.mm.app.Views.MainProductionPlanView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Base="clr-namespace:Longgong.mm.app.Views.Base"
+    Height="Auto" Width="Auto">
+    <Base:EntityViewBase />
+</UserControl>

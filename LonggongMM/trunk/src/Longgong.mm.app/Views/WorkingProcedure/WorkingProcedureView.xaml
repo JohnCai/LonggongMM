@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="Longgong.mm.app.Views.WorkingProcedureView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:WPFComponents="clr-namespace:Mavis.WPFComponents;assembly=Mavis.WPFComponents"
+    xmlns:Base="clr-namespace:Longgong.mm.app.Views.Base"
+    Height="Auto" Width="Auto">
+    <Base:EntityViewBase />
+</UserControl>

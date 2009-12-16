@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ValueConverter="clr-namespace:Mavis.MVVM.ValueConverter;assembly=Mavis.MVVM"
+    xmlns:Core="clr-namespace:Longgong.mm.Core;assembly=Longgong.mm.Core">
+    
+    <ValueConverter:EnumDisplayer Type="{x:Type Core:ProductType}" x:Key="productTypes" />
+    
+</ResourceDictionary>

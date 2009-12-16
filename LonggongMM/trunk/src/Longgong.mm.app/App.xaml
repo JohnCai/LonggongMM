@@ -1,0 +1,24 @@
+﻿<Application x:Class="Longgong.mm.app.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>                
+                <!--will load it in run time-->
+                <!--<ResourceDictionary Source="Resources/ViewModelTemplate.xaml"/>--> 
+                
+                <ResourceDictionary Source="Resources/Brushes.xaml"/>
+                <ResourceDictionary Source="Resources/AppStyles.xaml"/>
+                <ResourceDictionary Source="Resources/ListViewStyles.xaml"/>
+                <ResourceDictionary Source="Resources/GlobalConverters.xaml"/>
+                <ResourceDictionary Source="Resources/TabStyles.xaml"/>
+                <ResourceDictionary Source="Resources/MenuStyles.xaml"/>
+                <ResourceDictionary Source="Resources/EnumDisplayResources.xaml"/>
+                
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+         
+    </Application.Resources>
+</Application>
