@@ -49,15 +49,6 @@ namespace Longgong.mm.app
             IocContainer.AddComponent<IRecipeRepository, RecipeRepository>();
             IocContainer.AddComponent<IMainProductionPlanRepository, MainProductionPlanRepository>();
 
-            //register ShellViewModels
-            //IocContainer.AddComponent<LocationViewModel>();
-            //IocContainer.AddComponent<WorkingProcedureViewModel>();
-            //IocContainer.AddComponent<ProductViewModel>();
-
-            //IocContainer.AddComponent<RecipeViewModel>();
-            //IocContainer.AddComponent<RecipeDetailViewModel>();
-            //IocContainer.AddComponent<RecipeBrowserViewModel>();
-
             //register UI Services
             IocContainer.AddComponent<IMessageBoxService, VPFMessageBoxService>();
             IocContainer.AddComponent<IShowDialogService, VPFShowDialogService>();
