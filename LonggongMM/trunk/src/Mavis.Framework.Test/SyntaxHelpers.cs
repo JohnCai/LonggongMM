@@ -104,6 +104,11 @@ namespace Mavis.Framework.Test
             Assert.IsEmpty(aString);
         }
 
+        public static void ShouldBeNullOrEmpty(this string aString)
+        {
+            Assert.IsTrue(string.IsNullOrEmpty(aString));
+        }
+
         public static void ShouldNotBeEmpty(this ICollection collection)
         {
             Assert.IsNotEmpty(collection);
